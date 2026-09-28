@@ -227,8 +227,8 @@ public class MainController {
                 Room room1 = sortedRooms.get(j);
                 Room room2 = sortedRooms.get(j+1);
 
-                int room1ID = Integer.parseInt(room1.getId());
-                int room2ID = Integer.parseInt(room2.getId());
+                int room1ID = Integer.parseInt(room1.getId().replace("\"", "").trim());
+                int room2ID = Integer.parseInt(room2.getId().replace("\"", "").trim());
 
                 if(room1ID > room2ID){
                     sortedRooms.set(j,room2);
